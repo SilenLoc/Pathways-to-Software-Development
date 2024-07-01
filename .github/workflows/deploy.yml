@@ -18,12 +18,16 @@ jobs:
         uses: peaceiris/actions-mdbook@v1
         with:
            mdbook-version: 'latest'
+      
+      - uses: taiki-e/install-action@v2
+        with:
+           tool: just@1   
 
-      - run: mdbook build
+      - run: just build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./pathways_to_software_development
+          publish_dir: ./pathways_to_software_development/book
