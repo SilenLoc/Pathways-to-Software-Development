@@ -1,0 +1,10 @@
+[book]
+authors = ["Silen Locatelli"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Pathways to Software Development"
+
+[output.html]
+site-url = "/mdBook/"
+git-repository-url = "https://github.com/SilenLoc/Pathways-to-Software-Development"
